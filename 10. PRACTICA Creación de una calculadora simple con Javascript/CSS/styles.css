@@ -1,0 +1,127 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-size: 10px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background-color: #CCCCCC;
+    width: 100%;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.header__titulo{
+    font-size: 2rem;
+    color: #012b95;
+    margin: 2rem auto;
+}
+
+.container__section{
+    width: 70%;
+    background-color: #202A5A;
+    height: 20rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.section__article{
+    margin: 1rem;
+    padding: 2rem;
+    display: flex;
+    align-items: center;
+}
+
+.article__numero{
+    height: 4rem;
+    width: 25rem;
+    margin: 0 1rem;
+    border: none;
+    outline: none;
+    padding: 1rem;
+    font-size: 2rem;
+    color: #012b95;
+    transition: .3s all ease;
+}
+
+.focus-shadow{
+    box-shadow: 0 0 15px #CCCCCC;
+    outline: none;
+}
+
+.sombra-roja{
+    box-shadow: 0 0 15px #922;
+}
+
+.sombra-amarilla {
+    box-shadow: 0 0 10px #dc9614;
+}
+
+.sombra-verde {
+    box-shadow: 0 0 10px #0c8a0c;
+}
+
+/* Para Chrome, Safari, Edge y Opera */
+input[type=number]::-webkit-outer-spin-button,
+input[type=number]::-webkit-inner-spin-button {
+-webkit-appearance: none;
+margin: 0;
+}
+
+.article__error{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.mensaje-error{
+    margin-top: 1rem;
+    font-size: 1.5rem;
+    color: #fc0000;
+}
+
+/* Para Firefox */
+input[type=number] {
+-moz-appearance: textfield;
+}
+
+.section__boton{
+    width: 53rem;
+    height: 4rem;
+    display: flex;
+    justify-content: space-around;
+}
+
+.boton{
+    width: 12rem;
+    height: 3rem;
+    background-color: #3BA8D6;
+    color: #fff;
+    font-weight: 600;
+    font-size: 1.2rem;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    transition: .3s all ease-in-out;
+}
+
+.boton:hover{
+    box-shadow: 0 0 15px #3BA8D6;
+    color: #202A5A;
+}
+
+.section__resultado{
+    text-align: center;
+    color: #fff;
+    font-size: 2rem;
+    margin: 1rem auto;
+    font-weight: 600;
+}

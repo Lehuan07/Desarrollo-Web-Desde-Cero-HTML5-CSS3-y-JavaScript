@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/10. PRACTICA Creación de una calculadora simple con Javascript/CSS/styles.css">
+    <title>Calculadora con JS</title>
+    <script src="/10. PRACTICA Creación de una calculadora simple con Javascript/JS/script.js" defer></script>
+</head>
+<body>
+    <div class="container">
+    <header class="container__header">
+        <h1 class="header__titulo">Calculadora con JS</h1>
+    </header>
+    <section class="container__section">
+        <article class="section__article">
+            <div class="article__error">
+            <input type="number" class="article__numero" id="article__numero-uno" autofocus>
+            <p class="mensaje-error" id="error-uno"></p>
+            </div>
+            <div class="article__error">
+            <input type="number" class="article__numero" id="article__numero-dos">
+                <p class="mensaje-error" id="error-uno"></p>
+            </div>
+        </article>
+        <article class="section__boton" id="section__boton">
+            <button class="boton" id="boton__suma">Sumar</button>
+            <button class="boton" id="boton__restar">Restar</button>
+            <button class="boton" id="boton__dividir">Dividir</button>
+            <button class="boton" id="boton__multiplicar">multiplicar</button>
+        </article>
+        <p class="section__resultado" id="section__resultado">-</p>
+    </section>
+    </div>
+    
+</body>
+</html>
