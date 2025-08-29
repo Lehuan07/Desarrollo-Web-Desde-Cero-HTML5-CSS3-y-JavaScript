@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aplicar estilos a un formulario con Flexbox</title>
+    <link rel="stylesheet" href="/11. PRACTICA Aplicando validación a campos del form con fkex/css/styles.css">
+    <script src="/11. PRACTICA Aplicando validación a campos del form con fkex/JS/script.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1 class="titulo">Aplicando validacion a campos del form con flex</h1>     
+    </header>
+    <section>
+        <form class="formulario" action="" id="formulario" name="formulario">
+            <div class="campo">
+                <label for="nombre">Nombre</label>
+                <input type="text" id="nombre" name="nombre" >
+            </div>
+            <div class="campo">
+                <label for="apellido">Apellido</label>
+                <input type="text" id="apellido" name="apellido" >
+            </div>
+            <div class="campo">
+                <label for="telefono">Teléfono</label>
+                <input type="tel" id="telefono" name="telefono" >
+            </div>
+            <div class="campo">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" >
+            </div>
+            <div class="radios">
+                <label for="radioH">Hombre</label>
+                <input type="radio" name="radio" id="radioH" class="radio">
+                <label for="radioM">Mujer</label>
+                <input type="radio" name="radio" id="radioM" class="radio">
+            </div>
+            <div class="textareapadre">
+            <div class="campo">
+                <label for="mensaje">Comentarios</label>
+                <textarea id="mensaje" name="mensaje" ></textarea>
+            </div>
+            </div>
+            <div class="check">
+                <label for="checkbox">Terminos y condiciones</label>
+                <input type="checkbox" id="checkbox" name="checkbox" class="checkbox"> 
+            </div>
+            <div class="claseboton">
+            <button type="submit" class="boton" id="btnEnviar">Enviar</button>
+        </div>
+        </form>
+    </section>
+    
+</body>
+</html>
