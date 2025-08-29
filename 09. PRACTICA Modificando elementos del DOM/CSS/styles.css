@@ -1,0 +1,51 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-size: 10px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.boton{
+    width: 19rem;
+    height: 5rem;
+    margin: 2rem auto;
+    display: block;
+    font-size: 1.2rem;
+    background-color: #f5a8b9;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    transition: .3s all ease;
+    color: #55004a;
+}
+
+.boton:hover{
+    background-color: #060866;
+    color: #68DCFF;
+}
+
+.cajaChica{
+    width: 10rem;
+    height: 10rem;
+    background-color: #229999;
+    margin: 2rem auto;
+    transition: .3s all ease-in-out;
+}
+
+.cajaGrande{
+    width: 20rem;
+    height: 20rem;
+    border-radius: 10rem;
+    background-color: #496c11;
+    margin: 2rem auto;
+    transition: .3s all ease-in-out;
+}
