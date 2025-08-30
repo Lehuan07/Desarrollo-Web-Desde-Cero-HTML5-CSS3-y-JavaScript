@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root{
+    --color-backgraund: #EFF6F5;
+    --color-primario: #FCB03B;
+    --color-secundario: #E92F3D;
+    --color-texto: #A1A5A6;
+    --default-text: 'Open Sans';
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--default-text);
+}
+
+html{
+    font-size: 10px;
+}
+
+body{
+    background: var(--color-backgraund);
+}
+
+.titulos{
+    font-size: 4rem;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 600;
+}
+
+.subtitulos{
+    font-size: 2.5rem;
+    font-weight: 400;
+    text-align: center;
+    text-transform: uppercase;
+    color: var(--color-primario);
+}
+
+
+.boton{
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 1.4rem;
+    color: #fff;
+    background-color: var(--color-primario);
+    font-weight: 700;
+    border: none;
+    outline: none;
+    padding: 1.5rem 3rem;
+    border: 2px solid var(--color-primario);
+    cursor: pointer;
+    position: relative;
+    top: 2rem;
+    transition: all .3s linear;
+}
+
+.boton span{
+    padding-left: 1.5rem;
+}
+
+.boton:hover{
+    padding: 1.5rem 4.5rem;
+}
+
+.header__principal{
+    width: 100%;
+    height: 11rem;
+    background-color: transparent;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.principal__left{
+    width: 35%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.left__logo{
+    width: 16rem;
+    height: 13rem;
+}
+
+.left__ancor{
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 2rem;
+    margin: 0 2 rem;
+    color: var(--color-texto);
+    font-weight: 600;
+}
+
+.principal__right{
+    width: 10%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-right: 2rem;
+}
+
+.right__ancor{
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 2rem;
+    margin: 0 2 rem;
+    color: var(--color-texto);
+    font-weight: 600;
+}
