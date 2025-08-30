@@ -139,108 +139,50 @@ body{
     color: var(--color-secundario);
 }
 
-@media screen and (max-width: 672px) {
-    .fa-bars{
-    position: fixed;
-    display: inline;
-    top: 5rem;
-    right: 5rem;
-    color: var(--color-texto);
-    font-size: 3rem;
-    cursor: pointer;
-    transition: all .5s;
+.fa-bars{
+    opacity: 0;
+    cursor: none;
+    user-select: none;
 }
 
-.fa-bars:hover{
-    color: var(--color-secundario);
+.layout__nav{
+    display: none;
 }
-    
+
+@media screen and (max-width: 672px) {
     .right__ancor, 
     .left__ancor{
         display: none;
     }
 
-    .layout__nav{
-    width: 100%;
-    height: 100%;
+    .fa-bars{
+    opacity: 1;
+    cursor: pointer;
+    user-select: auto;
     position: absolute;
-    top: 0;
-    right: -70rem;
-    z-index: 1;
-    background-color: var(--color-nav-mobile);
-    transition: all .5s;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    top: 5rem;
+    right: 5rem;
+    font-size: 2.5rem;
+    transition: all 300ms ease-in-out;
+    color: var(--color-nav-mobile);
     }
-
-    .nav__active{
-        right: 0;
-    }
-
-    .fa-angle-right{
-        z-index: 1;
-        color: var(--color-letras-mobile);
-        font-size: 3rem;
-        position: absolute;
-        top: 5rem;
-        right: 5rem;
-        transition: all .5s;
-        cursor: pointer;
-    }
-
-    .fa-angle-right:hover{
+    .fa-bars:hover{
         color: var(--color-secundario);
     }
 
-    .nav__description{
-        z-index: 1;
-        width: 50%;
-        height: 20rem;
-        margin-top: 10rem;
+    .layout__nav{
+        position: absolute;
+        top: 0;
+        right: 0;
+        display: block;
+        width: 100%;
+        height: 100vh;
+        background: #222;
+        color: #fff;
+        transition: right 0.4s ease; /* animación suave */
         display: flex;
         flex-direction: column;
         align-items: center;
-        justify-content: space-around;
+        justify-content: center;
     }
-
-    .layout__nav ul {
-    list-style: none;
-    z-index: 2;
-    }
-
-    .layout__nav li {
-        margin: 4rem 0;
-        text-align: center;
-        z-index: 2;
-    }
-
-    .layout__nav a {
-        text-decoration: none;
-        text-transform: uppercase;
-        cursor: pointer;
-        font-size: 2rem;
-        color: var(--color-letras-mobile);
-        font-weight: 600;
-        transition: all 0.5s;
-        z-index: 2;
-    }
-
-    .layout__nav a:hover{
-        color: var(--color-secundario);
-    }
-
-    .nav__social{
-        width: 50%;
-        height: 20rem;
-        
-        margin-top: 20rem;
-    }
-    .social__ul{
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: space-around;
-    }
-
 }
