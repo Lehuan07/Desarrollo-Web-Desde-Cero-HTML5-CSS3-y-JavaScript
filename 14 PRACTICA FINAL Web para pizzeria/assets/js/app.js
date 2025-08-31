@@ -2,16 +2,17 @@
 //Menu lateral desplegable en mobile
 
 const bars = document.querySelector('.fa-bars');
-const nav  = document.querySelector('.layout__nav');
+const nav  = document.querySelector('.header__principal');
 const arrow = document.querySelector(".fa-angle-right")
 
 bars.addEventListener('click', () => {
-    nav.classList.add('layout__nav-active');
     bars.style.display = "none";
-    
+    arrow.style.display = 'block'
+    nav.classList.add('header__principal-active')
 });
 
 arrow.addEventListener('click', () =>{
-    nav.classList.remove('layout__nav-active');
+    arrow.style.display = 'none'
     bars.style.display = "block"
+    nav.classList.remove('header__principal-active')
 })
