@@ -1,31 +1,31 @@
 
 //Menu lateral desplegable en mobile
 
-const bars = document.querySelector('.fa-bars');
-const nav  = document.querySelector('.header__principal');
-const arrow = document.querySelector(".move__right--mobile-hiden")
-const enlaces = document.querySelector(".principal__left")
+const bars = document.querySelector('.right__bars');
+const nav  = document.querySelector('.principal__nav');
+const arrow = document.querySelector(".right__mobile");
+const enlaces = document.querySelector(".principal__left");
 
 bars.addEventListener('click', () => {
-    bars.style.display = "none";
-    arrow.classList.remove('move__right--mobile-hiden')
-    arrow.classList.add('move__right--mobile')
-    nav.classList.add('header__principal-active')
+
+    nav.classList.add("principal__nav-show")
+    arrow.classList.remove("right__mobile")
+    arrow.classList.add("right__mobile-show")
 });
 
 arrow.addEventListener('click', () =>{
-    arrow.classList.remove('move__right--mobile')
-    arrow.classList.add('move__right--mobile-hiden')
-    bars.style.display = "block"
-    nav.classList.remove('header__principal-active')
+    arrow.classList.remove("right__mobile-show")
+    arrow.classList.add("right__mobile")
+    nav.classList.remove("principal__nav-show")
+    nav.classList.add("principal__nav")
 })
 
 enlaces.addEventListener('click', ()=>{
     setTimeout(()=>{
-        arrow.classList.remove('move__right--mobile')
-        nav.classList.remove('header__principal-active')
-        arrow.classList.add('move__right--mobile-hiden')
-        bars.style.display = "block"
+        arrow.classList.remove("right__mobile-show")
+        arrow.classList.add("right__mobile")
+        nav.classList.remove("principal__nav-show")
+        nav.classList.add("principal__nav")
 
     }, 500)
 })
