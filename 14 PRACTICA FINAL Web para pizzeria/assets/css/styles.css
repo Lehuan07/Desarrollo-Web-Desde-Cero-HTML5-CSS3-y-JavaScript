@@ -8,6 +8,8 @@
     --color-nav-mobile: #333333;
     --color-letras-mobile: #989D9C;
     --default-text: 'Open Sans';
+    --header-height: 14rem;
+
 }
 
 *{
@@ -28,7 +30,7 @@ body{
     overflow-x: hidden;
 }
 
-.titulos{
+.description__title{
     font-size: 8rem;
     text-align: center;
     text-transform: uppercase;
@@ -45,7 +47,7 @@ body{
 }
 
 
-.boton{
+.description__button{
     text-decoration: none;
     text-transform: uppercase;
     font-size: 1.4rem;
@@ -62,11 +64,11 @@ body{
     transition: all .3s linear;
 }
 
-.flechita{
+.button__flechita{
     padding-left: 1.5rem;
 }
 
-.flechita:hover{
+.description__button:hover{
     padding: 1.5rem 4.5rem;
 }
 
@@ -76,6 +78,9 @@ body{
     padding: 2rem;
     display: flex;
     align-items: center;
+    position: fixed;
+    z-index: 1;
+    background-color: var(--color-backgraund);
 }
 
 .header__left-group {
@@ -154,5 +159,78 @@ body{
 
 .right__mobile{
     display: none !important;
-    
+}
+
+/*Carrusel de pizzas*/
+.main__principal{
+    width: 100%;
+    height: 100vh;
+    padding-top: calc(var(--header-height));
+    display: flex;
+}
+
+.principal__carrousel{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.carrousel__prev, .carrousel__next{
+    font-size: 3rem;
+    margin: 0 1rem;
+    padding: 1rem;
+    color: var(--color-secundario);
+    width: 5rem;
+    height: 5rem;
+    cursor: pointer;
+    text-align: center;
+    transition: all .3s ease;
+    border-radius: 0.5rem;
+}
+
+.carrousel__prev:hover, .carrousel__next:hover{
+    background-color: #e92f3f81;
+}
+.corrousel__contenedor{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    transition: transform 0.5s ease-in-out;
+    will-change: transform;
+}
+
+.carrousel__track {
+    min-width: 100%;
+    height: 100%;
+    flex-shrink: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.track__description{
+    width: 40rem;
+    height: 20rem;
+}
+
+.description__subtitle{
+    font-size: 4rem;
+    font-weight: 100;
+    text-transform: lowercase;
+}
+
+.description__subtitle>strong{
+    font-weight: 500;
+}
+
+.description__parrafo{
+    color: var(--color-texto);
+    font-size: 1.6rem;
+    font-style: italic;
 }
