@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,44 +10,98 @@
     <link rel="shortcut icon" href="../img/logo.png">
     <script src="../js/app.js" defer></script>
 </head>
+
 <body>
     <div class="layout">
-        
+
         <header class="header__principal">
             <div class="principal__left">
-            <img src="../img/logo.png" alt="Logo de World Pizza" class="left__logo">
-        <a href="#" class="left__ancor">Servicios</a>
-        <a href="#" class="left__ancor">Equipo</a>
-        <a href="#" class="left__ancor">Contacto</a>
+                <img src="../img/logo.png" alt="Logo de World Pizza" class="left__logo">
+                <a href="#" class="left__ancor">Servicios</a>
+                <a href="#" class="left__ancor">Equipo</a>
+                <a href="#" class="left__ancor">Contacto</a>
+            </div>
+            <div class="principal__right">
+                <a href="#" class="right__ancor"><i class="fa-brands fa-facebook"></i></a>
+                <a href="#" class="right__ancor"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#" class="right__ancor"><i class="fa-brands fa-x-twitter"></i></a>
+                <a href="#" class="right__ancor"><i class="fa-brands fa-youtube"></i></a>
+
+            </div>
+        </header>
+        <div class="menu__mobile">
+            <img src="../img/logo.png" alt="Logo de World Pizza" class="logo__mobile">
+            <i class="fa-solid fa-angle-right fa-angle-right-hiden move__right--mobile" id="menu__mobile--right"></i>
+            <i class="fas fa-bars"></i>
         </div>
-        <div class="principal__right">
-            <a href="#" class="right__ancor"><i class="fa-brands fa-facebook"></i></a>
-            <a href="#" class="right__ancor"><i class="fa-brands fa-instagram"></i></a>
-            <a href="#" class="right__ancor"><i class="fa-brands fa-x-twitter"></i></a>
-            <a href="#" class="right__ancor"><i class="fa-brands fa-youtube"></i></a>
-            
-        </div>
-    </header>
-    <div class="menu__mobile">
-        <img src="../img/logo.png" alt="Logo de World Pizza" class="logo__mobile">
-        <i class="fa-solid fa-angle-right fa-angle-right-hiden"></i>
-        <i class="fas fa-bars"></i>
-    </div>
 
         <section class="layout__slider">
             <i class="fa-solid fa-angle-left"></i>
-            <p class="slider__subtitle">Producto <strong>premium</strong></p>
-            <h1 class="slider__title">Pepperoni</h1>
-            <p class="slider__description">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Provident velit sapiente architecto, iure maiores voluptate in at ut error perspiciatis deleniti magni voluptatem soluta voluptas reprehenderit recusandae quam. Quibusdam, consequatur?</p>
-            <button class="boton">Solicitala aca!</button>
-            <div class="slider__img"></div>
-            <i class="fa-solid fa-angle-right"></i>
+
+            <div class="slider__track">
+                <!-- 🔹 Slide 1 -->
+                <article class="slider__item">
+                    <div class="item__description">
+                    <p class="slider__subtitle">Producto <strong>premium</strong></p>
+                    <h1 class="titulos">Especial</h1>
+                    <p class="slider__description">Es una pizza deliciosa con ingredientes frescos. Que contiene pepperoni, champiñones y aceitunas. A demás, tiene un precio increible de tan solo $10.99</p>
+                    <button class="boton">¡Quiero una! <span><i class="fa-solid fa-angle-right flechita"></i></span></button>
+                    </div>
+                    <div class="slider__img"></div>
+                </article>
+
+                <!-- 🔹 Slide 2 -->
+                <article class="slider__item">
+                    <div class="item__description">
+                    <p class="slider__subtitle">Producto <strong>deluxe</strong></p>
+                    <h1 class="titulos">Suprema</h1>
+                    <p class="slider__description">Es una pizza XXL con ingredientes de primera. Tiene salsa de tomate, queso mozzarella, jamón y aceitunas. A demás, tiene un precio increible de tan solo $15.99</p>
+                    <button class="boton">¡Quiero una! <span><i class="fa-solid fa-angle-right flechita"></i></span></button>
+                    </div>
+                    <div class="slider__img"></div>
+                </article>
+
+                <!-- 🔹 Slide 3 -->
+                <article class="slider__item">
+                    <div class="item__description">
+                    <p class="slider__subtitle">Producto <strong>especial</strong></p>
+                    <h1 class="titulos">americana</h1>
+                    <p class="slider__description">Es una pizza tipica americana con ingredientes como mozzarella, aceitunas y salsa de tomate. Pedila por tan solo $9.99</p>
+                    <button class="boton">¡Quiero una! <span><i class="fa-solid fa-angle-right flechita"></i></span></button>
+                    </div>
+                    <div class="slider__img"></div>
+                </article>
+
+                <article class="slider__item">
+                    <div class="item__description">
+                    <p class="slider__subtitle">Producto <strong>tropical</strong></p>
+                    <h1 class="titulos">Margarita</h1>
+                    <p class="slider__description">Es una pizza deliciosa con ingredientes frescos. Que contiene albahaca, tomate y mozzarella. A demás, tiene un precio increible de tan solo $11.99</p>
+                    <button class="boton">¡Quiero una! <span><i class="fa-solid fa-angle-right flechita"></i></span></button>
+                    </div>
+                    <div class="slider__img"></div>
+                </article>
+
+                <article class="slider__item">
+                    <div class="item__description">
+                    <p class="slider__subtitle">Producto <strong>italiana</strong></p>
+                    <h1 class="titulos">pepperoni</h1>
+                    <p class="slider__description">Es una pizza tipica de italia con ingredientes como pepperoni, mozzarella y salsa de tomate. Pedila por tan solo $10.99</p>
+                    <button class="boton">¡Quiero una! <span><i class="fa-solid fa-angle-right flechita"></i></span></button>
+                    </div>
+                    <div class="slider__img"></div>
+                </article>
+            </div>
+
+            <i class="fa-solid fa-angle-right move__right" id="menu__move--right"></i>
         </section>
 
-    </div>
-    
-    
 
-    
+    </div>
+
+
+
+
 </body>
+
 </html>

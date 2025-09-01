@@ -25,11 +25,11 @@ body{
     background: var(--color-backgraund);
     width: 100%;
     height: 100%;
-    overflow: hidden;
+    overflow-x: hidden;
 }
 
 .titulos{
-    font-size: 4rem;
+    font-size: 8rem;
     text-align: center;
     text-transform: uppercase;
     letter-spacing: 1px;
@@ -74,10 +74,12 @@ body{
     width: 100%;
     height: 11rem;
     margin-top: 1rem;
-    background-color: transparent;
+    background-color: var(--color-backgraund);
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    position: fixed;
+    z-index: 1;
 }
 
 .principal__left{
@@ -144,7 +146,7 @@ body{
     margin: 0 0.5rem;
 }
 
-.fa-bars, .fa-angle-right{
+.fa-bars, .move__right--mobile{
     opacity: 0;
     cursor: none;
     user-select: none;
@@ -154,6 +156,74 @@ body{
     display: none;
 }
 
+/*Menu de pizzas*/
+
+.layout__slider{
+    width: 100%;
+    height: 100vh;
+    padding: 3rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.move__right,
+.fa-angle-left{
+    opacity: 1;
+    cursor: pointer;
+    user-select: auto;
+    font-size: 4rem;
+    transition: all 300ms ease-in-out;
+    color: var(--color-secundario);
+}
+
+.move__right:hover,
+.fa-angle-left:hover{
+    color: var(--color-texto);
+}
+
+.slider__track{
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    width: calc(100*5);
+}
+
+.slider__item{
+    min-width: 100%;
+    height: 100vh;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+}
+
+.item__description{
+    width: 50rem;
+    margin-left: 10rem;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+
+.slider__subtitle{
+    text-transform: lowercase;
+    font-size: 3rem;
+    font-weight: 100;
+}
+
+.slider__subtitle>strong{
+    font-weight: 600;
+}
+
+
+
+
+
+
+
 @media screen and (max-width: 684px) {
 
     .left__logo{
@@ -161,14 +231,16 @@ body{
     }
 
     .menu__mobile{
-        display: fixed;
-        top: 0;
+        position: fixed;
+        top: -1rem;
         width: 100%;
         height: 11rem;
         margin-top: 1rem;
         display: flex;
         flex-direction: row;
         justify-content: space-between;
+        z-index: 1;
+        background-color: var(--color-backgraund);
     }
 
     .logo__mobile{
@@ -179,7 +251,7 @@ body{
         height: 13rem;
     }
 
-    .fa-bars, .fa-angle-right{
+    .fa-bars, .move__right--mobile{
         opacity: 1;
         cursor: pointer;
         user-select: auto;
@@ -189,18 +261,18 @@ body{
         font-size: 2.5rem;
         transition: all 300ms ease-in-out;
         color: var(--color-texto);
-        z-index: 1;
+        z-index: 2;
     }
 
-    .fa-bars:hover, .fa-angle-right:hover{
+    .fa-bars:hover, .move__right--mobile{
         color: var(--color-secundario);
     }
 
-    .fa-angle-right-hiden{
+    .move__right--mobile-hiden{
         display: none;
         opacity: 0;
-    cursor: none;
-    user-select: none;
+        cursor: none;
+        user-select: none;
     }
 
     .header__principal{
