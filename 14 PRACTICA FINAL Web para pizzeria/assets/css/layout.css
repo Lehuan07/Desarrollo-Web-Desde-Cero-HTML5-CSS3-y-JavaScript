@@ -1,0 +1,110 @@
+
+.section__layout{
+    display: grid;
+    grid-template-areas: 
+    "titulos titulos titulos"
+    "desc1   img     desc2"
+    "desc1   img   desc2";
+    height: 100vh;
+    gap: 2rem;
+    padding-top: calc(var(--header-height));
+}
+
+.layout__titulos {
+    grid-area: titulos;
+    text-align: center;
+    font-size: clamp(3rem, 3vw, 4rem);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 600;
+}
+
+.layout__description, .layout__eficient{
+    grid-area: desc1;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 35vw;
+
+}
+
+.layout__img {
+    grid-area: img;
+}
+
+.layout__eficient {
+    grid-area: desc2;
+}
+
+
+.description__ingredientes{
+    width: 80%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 4rem;
+}
+
+.ingredientes__ico, .timmer__ico{
+    width: 8rem;
+    height: 8rem;
+    border: 4px double var(--color-texto);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+    transition: all .3s ease-in-out;
+}
+
+.ico__services, .ico__timmer{
+    font-size: 4rem;
+    color: var(--color-primario);
+    transition: all .3s ease-in-out;
+}
+
+.ingredientes__ico:hover {
+    background-color: var(--color-primario);
+}
+
+.ingredientes__ico:hover 
+.ico__services {
+    color: var(--color-backgraund);
+}
+.ico__timmer{
+    color: var(--color-secundario);
+}
+
+.timmer__ico:hover{
+    background-color: var(--color-secundario);
+}
+
+.timmer__ico:hover 
+.ico__timmer{
+    color: var(--color-backgraund);
+}
+
+.ingredientes__title{
+    font-size: 1.8rem;
+    text-transform: uppercase;
+}
+
+.ingredientes__parrafo{
+    font-size: 1.3rem;
+    text-align: center;
+    color: var(--color-texto);
+}
+
+.layout__img-pizza{
+    width: 32vw;
+    height: auto;
+    transition: transform .3s linear;
+}
+
+.layout__img-pizza:hover{
+    transform: scale(1.15);
+}

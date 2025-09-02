@@ -104,4 +104,27 @@
             padding: 1rem 2rem;
             width: 35rem;
         }
+
+
+        /*Seccion de servicios*/
+
+        .layout__img{
+            display: none;
+        }
+
+        .section__layout{
+            padding: 0 10rem;
+        }
+
+        
+}
+
+@media screen and (max-width: 420px) {
+    .section__layout{
+            padding: 2rem;
+        }
+
+    .ingredientes__title{
+        font-size: 1.4rem !important;
+    }
 }
