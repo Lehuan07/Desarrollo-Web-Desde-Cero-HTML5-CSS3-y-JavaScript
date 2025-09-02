@@ -220,9 +220,6 @@ body{
     align-items: center;
 }
 
-.carrousel__track:first-child {
-    transform: translateX(0); /* el primero visible */
-}
 
 .track__description{
     width: 40rem;
