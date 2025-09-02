@@ -30,8 +30,8 @@ body{
     overflow-x: hidden;
 }
 
-.description__title{
-    font-size: 8rem;
+.description__title {
+    font-size: clamp(2rem, 5vw, 8rem); 
     text-align: center;
     text-transform: uppercase;
     letter-spacing: 1px;
@@ -62,14 +62,22 @@ body{
     position: relative;
     top: 2rem;
     transition: all .3s linear;
+    
 }
 
-.button__flechita{
-    padding-left: 1.5rem;
+.description__button:hover .button__flechita {
+    transform: translateX(2rem);
+    transition: transform 0.3s ease;
 }
+
+.button__flechita {
+    transform: translateX(0);
+}
+
 
 .description__button:hover{
-    padding: 1.5rem 4.5rem;
+    transform: scaleX(1.05);
+
 }
 
 .header__principal{
@@ -202,7 +210,7 @@ body{
 .carrousel__contenedor{
     width: 100%;
     height: 100%;
-    overflow: hidden;   /* oculta lo que queda afuera */
+    overflow: hidden;
     position: relative;
 }
 
@@ -214,21 +222,25 @@ body{
 
 .carrousel__track {
     flex: 0 0 100%;  /* cada slide ocupa 100% */
+    width: 100%;
     height: 100%;
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
     align-items: center;
 }
 
 
 .track__description{
-    width: 40rem;
-    height: auto;
-    margin-left: 13rem;
+    flex: 1;
+    max-width: 30%;
+    margin-left: 2rem;
+    display: flex;
+    flex-direction: column;
 }
 
 .description__subtitle{
-    font-size: 4rem;
+    font-size: clamp(1.8rem, 3vw, 6rem); 
     font-weight: 100;
     text-transform: lowercase;
 }
@@ -243,14 +255,19 @@ body{
     font-style: italic;
 }
 
+.carrousel__img {
+    flex: 1;
+    max-width: 70%;     /* nunca más ancho que el 50% */
+}
+
+
 .track__img{
-    height: 70rem;
-    width: 70rem;
-    margin-right: 13rem;
+    flex: 1; 
+    height: auto;
+    width: 100%;
     cursor: pointer;
-    scale: 1;
     transition: all .5s ease-in-out;
-    object-fit: cover;
+    object-fit: contain;
 }
 
 .track__img:hover{
