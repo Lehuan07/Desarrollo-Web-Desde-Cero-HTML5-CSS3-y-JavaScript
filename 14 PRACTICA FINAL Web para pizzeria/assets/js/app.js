@@ -29,3 +29,37 @@ enlaces.addEventListener('click', ()=>{
 
     }, 500)
 })
+
+//Slider
+let next = document.querySelector(".carrousel__next");
+let prev = document.querySelector(".carrousel__prev");
+let pizzas = document.querySelectorAll(".carrousel__track");
+let inner = document.querySelector(".carrousel__inner");
+
+let count = 0;
+
+
+next.addEventListener("click", () =>{
+    count++;
+    if(count > pizzas.length - 1){
+        count = 0;
+    }
+    showPizza()
+})
+
+prev.addEventListener("click", () =>{
+    count--;
+    if(count < 0){
+        count = pizzas.length - 1;
+    }
+
+    showPizza();
+})
+
+function showPizza() {
+    inner.style.transform = `translateX(${-100 * count}%)`;
+}
+
+
+
+showPizza();

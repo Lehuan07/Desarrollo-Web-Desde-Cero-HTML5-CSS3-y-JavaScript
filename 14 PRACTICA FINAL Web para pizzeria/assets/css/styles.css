@@ -191,32 +191,43 @@ body{
     border-radius: 0.5rem;
 }
 
+.btn__next, .btn__prev{
+    background-color: transparent;
+    border: none;
+    outline: none;
+}
 .carrousel__prev:hover, .carrousel__next:hover{
     background-color: #e92f3f81;
 }
-.corrousel__contenedor{
+.carrousel__contenedor{
     width: 100%;
     height: 100%;
+    overflow: hidden;   /* oculta lo que queda afuera */
+    position: relative;
+}
+
+.carrousel__inner {
     display: flex;
-    align-items: center;
-    justify-content: space-around;
     transition: transform 0.5s ease-in-out;
     will-change: transform;
 }
 
 .carrousel__track {
-    min-width: 100%;
+    flex: 0 0 100%;  /* cada slide ocupa 100% */
     height: 100%;
-    flex-shrink: 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
+.carrousel__track:first-child {
+    transform: translateX(0); /* el primero visible */
+}
 
 .track__description{
     width: 40rem;
-    height: 20rem;
+    height: auto;
+    margin-left: 13rem;
 }
 
 .description__subtitle{
@@ -233,4 +244,18 @@ body{
     color: var(--color-texto);
     font-size: 1.6rem;
     font-style: italic;
+}
+
+.track__img{
+    height: 70rem;
+    width: 70rem;
+    margin-right: 13rem;
+    cursor: pointer;
+    scale: 1;
+    transition: all .5s ease-in-out;
+    object-fit: cover;
+}
+
+.track__img:hover{
+    scale: 1.1;
 }
