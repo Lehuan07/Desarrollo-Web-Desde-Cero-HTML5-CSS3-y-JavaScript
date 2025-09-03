@@ -273,3 +273,31 @@ body{
 .track__img:hover{
     scale: 1.1;
 }
+
+/*BTN TOP*/
+
+.btn__top{
+    display:block;
+    border: none;
+    outline: none;
+    width: 5rem;
+    height: 5rem;
+    background-color: var(--color-primario);
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.btn__top-hiden{
+    display: none;
+}
+
+.ico__top{
+    color: var(--color-backgraund);
+    font-size: 2rem;
+}
+
+
+/*SECCION EQUIPO*/
