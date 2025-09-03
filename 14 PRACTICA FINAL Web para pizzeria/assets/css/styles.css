@@ -301,3 +301,136 @@ body{
 
 
 /*SECCION EQUIPO*/
+.section__team{
+    height: 100vh;
+    display: flex;
+}
+
+.team__cheff{
+    flex: 1;
+    overflow: hidden;
+    position: relative;
+    transition: all .5s ease-in-out;
+}
+
+.team__cheff:hover{
+    flex-grow: 3;
+}
+
+.cheff__img{
+    height: 100%;
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    filter: grayscale(80%);
+    transition: all .5s ease-in-out;
+}
+
+.team__cheff:hover .cheff__img{
+    filter: grayscale(0%);
+}
+
+.cheff__description{
+    position: absolute;
+    bottom: 1rem;
+    width: 100%;
+    text-align: center;
+    transition: all .1s linear;
+    opacity: 0;
+}
+
+.team__cheff:hover .cheff__description{
+    opacity: 1;
+    bottom: 6rem;
+    transition-delay: .3s;
+}
+
+.description__name{
+    font-size: 3rem;
+    color: #000;
+    font-weight: 600;
+    text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.5);
+}
+
+.description__title-cheff{
+    color: var(--color-secundario);
+    font-size: 2rem;
+    font-weight: 700;
+    font-style: italic;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+    text-shadow: 2px 2px 3px rgba(255, 0, 0, 0.5);
+}
+
+.cheff__redes .redes__link{
+    display: inline-block;
+    height: 4rem;
+    width: 4rem;
+    color: #fff;
+    background-color: var(--color-secundario);
+    line-height: 4rem;
+    border-radius: 50%;
+    margin: 0 0.5rem;
+    font-size: 1.8rem;
+    cursor: pointer;
+    transition: all 0.5s linear;
+}
+
+.cheff__redes .redes__link:hover{
+    color: var(--color-secundario);
+    background-color: transparent;
+    transform: scale(2);
+}
+
+/*Seccion ingredientes*/
+
+.section__ingredients{
+    width: 100%;
+    height: 28rem;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+}
+
+.ingredients__ingredient{
+    position: relative;
+    flex: 1;
+    height: 100%; 
+    overflow: hidden;
+}
+
+.ingredients__img{
+    position: absolute;
+    width: 100%;
+    object-fit:cover;
+    height: 100%; 
+    transition: all .5s ease-in-out;
+    display: flex;
+    z-index: -1;
+    filter: brightness(0.6);
+}
+.ingredients__ingredient:hover .ingredients__img {
+    filter: brightness(0.9);
+}
+.ingredients__description{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    transition: transform 0.3s ease-in-out;
+}
+
+.description__icon, .ingredients__title{
+    font-size: 3rem;
+    color: #fff;
+    text-shadow: 3px 3px 3px rgb(0, 0, 0, 0.5);
+}
+
+.ingredients__ingredient:hover .ingredients__description {
+    transform: translateY(20px);
+}
