@@ -30,8 +30,8 @@
                 <i class="fa-solid fa-angle-right right__mobile"></i>
                 <div class="principal__left">
                     <a href="#servicios" class="left__ancor">Servicios</a>
-                    <a href="#" class="left__ancor">Equipo</a>
-                    <a href="#" class="left__ancor">Contacto</a>
+                    <a href="#cheff" class="left__ancor">Equipo</a>
+                    <a href="#contact" class="left__ancor">Contacto</a>
                 </div>
 
 
@@ -125,7 +125,7 @@
         </main>
 
         <!--Seccion servicios World Pizza-->
-        <section class="section__layout">
+        <section class="section__layout" id="servicios">
             <div class="layout__titulos">
                 <h3 class="titulos__subtitle">La mejor pizza del mundo</h3>
                 <p class="titulos__title">Bienvenidos a World Pizza</p>
@@ -152,7 +152,7 @@
             </div>
 
             <div class="layout__img">
-                <img src="../img/mitad-mitad.png" alt="Pizza" class="layout__img-pizza" id="servicios">
+                <img src="../img/mitad-mitad.png" alt="Pizza" class="layout__img-pizza" >
             </div>
 
             <div class="layout__eficient">
@@ -191,7 +191,7 @@
                 </div>
             </div>
 
-            <div class="team__cheff">
+            <div class="team__cheff" id="cheff">
                 <img src="../img/perfil2.png" alt="Cheff" class="cheff__img">
                 <div class="cheff__description">
                     <p class="description__name">Eliza Smith</p>
@@ -268,7 +268,26 @@
                 </div>
             </div>
             </div>
-        </section>    
+        </section>
+
+        <section class="section__contact" id="contact">
+            <h3 class="titulos__subtitle">Queremos saber tu opinion!</h3>
+            <h2 class="titulos__title">Contáctanos</h2>
+            <form action="" class="contact__form">
+                <div class="form__inputs">
+                    <div class="inputs__name">
+                        <i class="fa-solid fa-user"></i> 
+                        <input type="text" class="contact__input" placeholder="Tu nombre"></div>
+                    <div class="inputs__email">
+                        <i class="fa-solid fa-envelope"></i> 
+                        <input type="email" class="contact__input" placeholder="Tu email"></div>
+                </div>
+                <div class="inputs__message">
+                    <i class="fa-solid fa-comments"></i> <textarea class="contact__textarea" placeholder="Escribe tu mensaje"></textarea>
+                </div>
+                <button type="submit" class="contact__button">Enviar</button>
+            </form>
+        </section>
     </div>
 </body>
 
