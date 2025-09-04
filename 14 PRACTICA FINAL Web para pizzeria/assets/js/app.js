@@ -97,3 +97,54 @@ btnTop.addEventListener("click", () => {
     });
 });
 
+
+
+//* Formulario de contacto:
+
+const formulario = document.querySelector(".contact__form");
+let mensajeSpan = document.querySelector(".contact__span");
+let mensajeAlert = document.querySelector(".contact__alert");
+
+
+formulario.addEventListener("submit", (e) => {
+    e.preventDefault();
+
+    const nombre = document.querySelector("#nombre");
+    const email = document.querySelector("#email");
+    const mensaje = document.querySelector("#mensaje");
+
+    let cont = 0;
+
+    if (nombre.value !== "") cont++;
+    if (email.value !== "") cont++;
+    if (mensaje.value !== "") cont++;
+
+    if (cont === 3) {
+    mensajeSpan.classList.add("contact__span-check");
+
+    setTimeout(() => {
+        mensajeSpan.classList.remove("contact__span-check");
+    }, 2000);
+
+    }else{
+        mensajeAlert.classList.add("contact__span-check")
+        setTimeout(() => {
+        mensajeAlert.classList.remove("contact__span-check");
+    }, 2000);
+    }
+
+});
+
+let inputs = document.querySelectorAll("input, textarea");
+let icoHumano = document.querySelector(".fa-user")
+let icoEmail = document.querySelector(".fa-envelope");
+let icoChat = document.querySelector(".fa-comments");
+
+inputs.forEach(input =>{
+    input.addEventListener("focus", ()=>{
+        input.classList.add("input__active")
+        icoHumano.classList.add("ico__active");
+        icoEmail.classList.add("ico__active")
+        icoChat.classList.add("ico__chat-active");
+    })
+})

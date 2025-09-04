@@ -87,7 +87,7 @@ body{
     display: flex;
     align-items: center;
     position: fixed;
-    z-index: 1;
+    z-index: 3;
     background-color: var(--color-backgraund);
 }
 
@@ -441,6 +441,7 @@ body{
     width: 100%;
     height: 100vh;
     padding: calc(var(--header-height));;
+    position: relative;
 }
 
 .titulos__title{
@@ -462,13 +463,17 @@ body{
 }
 
 .form__inputs{
-    width: 80%;
+    width: 60%;
     height: 4rem;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
     margin: 2rem;
+}
+
+.ico__chat-active{
+    color: var(--color-primario);
 }
 
 .inputs__name, .inputs__email{
@@ -479,8 +484,164 @@ body{
     flex-direction: row;
     align-items: center;
     justify-content: center;
+    transition: all 300ms ease;
 }
 
 .fa-envelope, .fa-user{
-    
+    height: 4rem;
+    width: 4rem;
+    font-size: 2rem;
+    background-color: var(--color-texto);
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+    transition: all 300ms ease;
+}
+
+.contact__input{
+    height: 100%;
+    width: 20vw;
+    padding: 1rem;
+    font-size: 1.6rem;
+    border: 1px solid var(--color-texto);
+    outline: none;
+    transition: all 300ms ease;
+}
+
+.inputs__message {
+    position: relative;
+    width: fit-content;
+    width: 60%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    transition: all 300ms ease;
+}
+
+.contact__textarea {
+    padding: 1rem 0 0 4rem;
+    width: 100%;
+    height: 15rem;
+    margin-bottom: 2rem;
+    resize: none;
+    font-size: 1.6rem;
+    border: 1px solid var(--color-texto);
+    outline: none;
+}
+
+.fa-comments{
+    height: 4rem;
+    width: 4rem;
+    font-size: 2rem;
+    color: var(--color-texto);
+}
+.inputs__message i {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    color: #aaa;
+    pointer-events: none;
+    transition: all 300ms ease;
+}
+
+.contact__button{
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 1.4rem;
+    color: #fff;
+    background-color: var(--color-primario);
+    font-weight: 700;
+    border: none;
+    outline: none;
+    padding: 1.5rem 3rem;
+    border: 2px solid var(--color-primario);
+    cursor: pointer;
+    position: relative;
+    top: 2rem;
+    transition: all .3s linear;
+}
+
+.contact__button:hover{
+    transform: scaleX(1.1);
+}
+
+.contact__span{
+    z-index: 1;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50%;
+    height: 6rem;
+    background-color: #D3F0D8;
+    padding: 0 0 0 2rem;
+    border-right: 5px solid #2EB048;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    opacity: 0;
+    pointer-events: none; /* 🚫 no se puede clickear ni seleccionar */
+    user-select: none;
+    transition: all .5s ease-in-out;
+}
+
+.fa-circle-check{
+    font-size: 2rem;
+    margin-right: 3rem;
+    color: #2EB048;
+}
+
+.span__mensaje{
+    font-size: 1.5rem;
+    color: #2EB048;
+}
+
+.contact__alert{
+    z-index: 1;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50%;
+    height: 6rem;
+    background-color: #F4D3D9;
+    padding: 0 0 0 2rem;
+    border-right: 5px solid #CB2547;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    opacity: 0;
+    pointer-events: none; /* 🚫 no se puede clickear ni seleccionar */
+    user-select: none;
+    transition: all .5s ease-in-out;
+}
+
+.fa-circle-exclamation{
+    font-size: 2rem;
+    margin-right: 3rem;
+    color: #CB2547;
+}
+
+.alert__mensaje{
+    font-size: 1.5rem;
+    color: #CB2547;
+}
+
+.input__active{
+    border: 1px solid var(--color-primario);
+}
+
+.ico__active{
+    background-color: var(--color-primario);
+}
+
+.textarea__active{
+    border: 1px solid var(--color-primario);
+}
+
+.contact__span-check {
+    opacity: 1;
+    pointer-events: auto; 
+    top: 16rem;
 }
