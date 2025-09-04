@@ -135,16 +135,43 @@ formulario.addEventListener("submit", (e) => {
 
 });
 
-let inputs = document.querySelectorAll("input, textarea");
-let icoHumano = document.querySelector(".fa-user")
-let icoEmail = document.querySelector(".fa-envelope");
-let icoChat = document.querySelector(".fa-comments");
+const nombreInput = document.querySelector("#nombre");
+const emailImput = document.querySelector("#email")
+const chatTextbox = document.querySelector("#mensaje")
+const icoNombre = document.querySelector(".fa-user")
+const icoEmail = document.querySelector(".fa-envelope");
+const icoChat = document.querySelector(".fa-comments");
 
-inputs.forEach(input =>{
-    input.addEventListener("focus", ()=>{
-        input.classList.add("input__active")
-        icoHumano.classList.add("ico__active");
-        icoEmail.classList.add("ico__active")
-        icoChat.classList.add("ico__chat-active");
-    })
+
+nombreInput.addEventListener("focus", () => {
+    nombreInput.classList.add("input__active");
+    icoNombre.classList.add("ico__active");
+});
+
+emailImput.addEventListener("focus", () =>{
+    emailImput.classList.add("input__active")
+    icoEmail.classList.add("ico__active")
 })
+
+
+chatTextbox.addEventListener("focus", () =>{
+    chatTextbox.classList.add("input__active")
+    icoChat.classList.add("ico__chat-active")
+})
+
+nombreInput.addEventListener("blur", () => {
+    nombreInput.classList.remove("input__active");
+    icoNombre.classList.remove("ico__active");
+});
+
+emailImput.addEventListener("blur", () =>{
+    emailImput.classList.remove("input__active")
+    icoEmail.classList.remove("ico__active")
+})
+
+
+chatTextbox.addEventListener("blur", () =>{
+    chatTextbox.classList.remove("input__active")
+    icoChat.classList.remove("ico__chat-active")
+})
+
